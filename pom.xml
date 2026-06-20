@@ -5638,6 +5638,9 @@
     </profile>
     <profile>
       <id>tree-merge</id>
+      <properties>
+        <maven.test.failure.ignore>true</maven.test.failure.ignore>
+      </properties>
       <build>
         <plugins>
           <plugin>
@@ -5646,7 +5649,6 @@
             <configuration>
               <forkCount>1</forkCount>
               <reuseForks>true</reuseForks>
-              <testFailureIgnore>true</testFailureIgnore>
               <argLine>
                 --add-exports=java.desktop/java.awt=ALL-UNNAMED
                 --add-exports=java.desktop/java.awt.peer=ALL-UNNAMED
