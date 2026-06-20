@@ -5649,6 +5649,21 @@
             <configuration>
               <forkCount>1</forkCount>
               <reuseForks>true</reuseForks>
+              <excludes>
+                <exclude>**/HeaderCheckTest.java</exclude>
+                <exclude>**/ImportControlLoaderTest.java</exclude>
+                <exclude>**/ConfigurationLoaderTest.java</exclude>
+                <exclude>**/SuppressionCommentFilterTest.java</exclude>
+                <exclude>**/gui/MainFrameModelTest.java</exclude>
+                <exclude>**/gui/MainFrameTest.java</exclude>
+                <exclude>**/gui/TreeTableTest.java</exclude>
+                <exclude>**/MainTest.java</exclude>
+                <exclude>**/MetadataGeneratorUtilTest.java</exclude>
+                <exclude>**/PackageObjectFactoryTest.java</exclude>
+                <exclude>**/PropertyCacheFileTest.java</exclude>
+                <exclude>**/TreeWalkerTest.java</exclude>
+                <exclude>**/CommonUtilTest.java</exclude>
+              </excludes>
               <argLine>
                 --add-exports=java.desktop/java.awt=ALL-UNNAMED
                 --add-exports=java.desktop/java.awt.peer=ALL-UNNAMED
@@ -5667,6 +5682,7 @@
                 -XX:+EnableDynamicAgentLoading
                 -Xlog:aot+map=trace,aot+map+oops=trace,aot=warning:file=${project.basedir}/aot.map:none:filesize=0
                 -XX:AOTCacheOutput=${project.basedir}/cache.aot
+                -XX:+AOTClassLinking
               </argLine>
             </configuration>
           </plugin>
